@@ -3,11 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.10.2",
+    "@mui/material": "^5.10.2",
+    "@mui/styles": "^5.10.2",
+    "@mui/x-data-grid": "^5.12.3",
+    "@mui/x-date-pickers": "^5.0.0-beta.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "clsx": "^1.2.1",
+    "http-proxy-middleware": "^2.0.6",
+    "i18next": "^21.8.14",
+    "prop-types": "^15.8.1",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.3",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -34,5 +48,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-react": "^7.18.6",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "webpack": "^5.73.0"
   }
 }
