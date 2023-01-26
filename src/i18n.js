@@ -3,9 +3,11 @@ import { initReactI18next } from "react-i18next";
 
 //Spanish
 import home_es from "./frameworks/locales/es/home.json";
+import nav_bar_es from "./frameworks/locales/es/nav-bar.json";
 
 //English
 import home_en from "./frameworks/locales/en/home.json";
+import nav_bar_en from "./frameworks/locales/en/nav-bar.json";
 
 i18n
   .use(initReactI18next)
@@ -23,9 +25,11 @@ i18n
     resources: {
       es: {
         home: home_es,
+        navBar: nav_bar_es,
       },
       en: {
         home: home_en,
+        navBar: nav_bar_en,
       },
     },
   });
