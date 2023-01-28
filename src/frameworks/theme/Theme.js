@@ -3,27 +3,19 @@ import { createTheme } from "@mui/material/styles";
 const defaultTheme = createTheme({
   palette: {
     primary: {
-      main: "#2080D0",
+      main: "#D9C5B4",
       dark: "#03579D",
     },
     secondary: {
-      main: "#12B6C0",
+      main: "#8C6F5E",
       dark: "#009290",
     },
     terceary: {
-      paler: "#FFF1E9",
-      pale: "#FFDAC4",
-      lighter: "#FFC09A",
-      light: "#FF9E64",
-      main: "#FC863F",
+      main: "#594E45",
       dark: "#F37021",
     },
     fourth: {
-      paler: "#FFFCE7",
-      pale: " #FFF9CA",
-      lighter: "#FFF5A7",
-      light: "#FFF28A",
-      main: "#FFED5E",
+      main: "#261F18",
       dark: "#FFE72D",
     },
     grey: {
@@ -42,23 +34,15 @@ const defaultTheme = createTheme({
     },
     success: {
       main: "#3DD386",
-      light: "#DEFEEB",
-      dark: "#1AAB63",
     },
     warning: {
       main: "#FFCF6A",
-      light: "#FFF4D7",
-      dark: "#FBAF37",
     },
     info: {
       main: "#4170D0",
-      light: "#EEF3FC",
-      dark: "#1952C7",
     },
     error: {
       main: "#F6635C",
-      light: "#FFF1F0",
-      dark: "#E31910",
     },
     background: {
       paper: "#FFFFFF",
@@ -77,40 +61,40 @@ const defaultTheme = createTheme({
     8: "0px 32px 64px -12px rgba(0, 0, 0, 0.14)",
   },
   typography: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "",
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
     h2: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 39,
     },
     h3: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 31,
     },
     h4: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 24,
     },
     h5: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 20,
     },
     h6: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 16,
     },
     body: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 16,
     },
     body1: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 14,
     },
     body2: {
-      fontFamily: "'Poppins', sans-serif",
+      fontFamily: "",
       fontSize: 12,
     },
   },

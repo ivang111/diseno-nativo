@@ -3,10 +3,11 @@ import { useNavigate, NavLink } from "react-router-dom";
 import Button from "../../../components/atoms/button";
 import Typography from "../../../components/atoms/typography/";
 import logo from "../../assets/pngegg.png";
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { routes } from "../../helpers";
 import { useTranslation } from "react-i18next";
 import Icon from "../../../components/icon";
+import { Box, Divider, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -19,7 +20,6 @@ const useStyles = makeStyles((theme) => {
       padding: theme.spacing(2, 4, 2, 3),
       backgroundColor: theme.palette.secondary.main,
       boxShadow: theme.shadows[2],
-      olor: theme.palette.grey[600],
     },
     logo: {
       margin: theme.spacing(0, 2),
@@ -36,6 +36,12 @@ const useStyles = makeStyles((theme) => {
     navItem: {
       color: theme.palette.background.paper,
     },
+    boxTogle: {
+      textAlign: "center",
+    },
+    listItemButtom: {
+      textAlign: "center", 
+    },
   };
 });
 
@@ -43,6 +49,41 @@ function NavBar() {
   const styles = useStyles();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation("navBar");
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const navItems = [
+    t("home"),
+    t("catalogue"),
+    t("about-us"),
+    t("ourProjects"),
+    t("discounts"),
+    t("howDoWeDoIt"),
+  ];
+
+  const linksItens = useMemo(() => {
+    return (
+      <Box onClick={handleDrawerToggle} className={styles.boxTogle}>
+       <NavLink to="/">
+          <img alt="logo" className={styles.logo} height={45} id="logo" src={logo} />
+        </NavLink>
+        {lenguage}
+        <Divider />
+        <List>
+          {navItems.map((item) => (
+            <ListItem disablePadding key={item}>
+              <ListItemButton className={styles.listItemButtom}>
+                <ListItemText primary={item} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
+    );
+  }, [i18n]);
 
   const handleOnClickHome = useCallback(() => {
     navigate(routes.home.path, { replace: true });
@@ -105,7 +146,7 @@ function NavBar() {
                 className={styles.navItem}
                 fontWeight="fontWeightBold"
                 text={t("home")}
-                variant="h4"
+                variant="h5"
               />
             }
             variant="text"
@@ -118,7 +159,7 @@ function NavBar() {
                 className={styles.navItem}
                 fontWeight="fontWeightBold"
                 text={t("catalogue")}
-                variant="h4"
+                variant="h5"
               />
             }
             variant="text"
@@ -131,7 +172,7 @@ function NavBar() {
                 className={styles.navItem}
                 fontWeight="fontWeightBold"
                 text={t("about-us")}
-                variant="h4"
+                variant="h5"
               />
             }
             variant="text"
@@ -144,7 +185,7 @@ function NavBar() {
                 className={styles.navItem}
                 fontWeight="fontWeightBold"
                 text={t("ourProjects")}
-                variant="h4"
+                variant="h5"
               />
             }
             variant="text"
@@ -157,7 +198,7 @@ function NavBar() {
                 className={styles.navItem}
                 fontWeight="fontWeightBold"
                 text={t("discounts")}
-                variant="h4"
+                variant="h5"
               />
             }
             variant="text"
@@ -170,7 +211,7 @@ function NavBar() {
                 className={styles.navItem}
                 fontWeight="fontWeightBold"
                 text={t("howDoWeDoIt")}
-                variant="h4"
+                variant="h5"
               />
             }
             variant="text"

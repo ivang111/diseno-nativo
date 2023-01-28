@@ -3,10 +3,6 @@ const routes = {
     path: "/",
     name: "home",
   },
-  contact: {
-    path: "/contact",
-    name: "contact",
-  },
   catalogue: {
     path: "/catalogue",
     name: "catalogue",
